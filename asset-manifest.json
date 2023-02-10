@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-movie-store/static/css/main.6d4e09db.css",
-    "main.js": "/react-movie-store/static/js/main.a2d54edd.js",
-    "index.html": "/react-movie-store/index.html",
-    "main.6d4e09db.css.map": "/react-movie-store/static/css/main.6d4e09db.css.map",
-    "main.a2d54edd.js.map": "/react-movie-store/static/js/main.a2d54edd.js.map"
+    "main.css": "/Movie-Stock/static/css/main.6d4e09db.css",
+    "main.js": "/Movie-Stock/static/js/main.a2d54edd.js",
+    "index.html": "/Movie-Stock/index.html",
+    "main.6d4e09db.css.map": "/Movie-Stock/static/css/main.6d4e09db.css.map",
+    "main.a2d54edd.js.map": "/Movie-Stock/static/js/main.a2d54edd.js.map"
   },
   "entrypoints": [
     "static/css/main.6d4e09db.css",
