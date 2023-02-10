@@ -1,3 +1,4 @@
+/* eslint-disable */
 export { default as Actors } from './Actors/Actors';
 export { default as Movies } from './Movies/Movies';
 export { default as MovieInfo } from './MovieInfo/MovieInfo';

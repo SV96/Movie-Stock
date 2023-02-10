@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import {
   Divider,
   List,
@@ -8,25 +8,25 @@ import {
   ListItemIcon,
   Box,
   CircularProgress,
-} from "@mui/material";
-import { Link } from "react-router-dom";
-import { useTheme } from "@mui/styles";
-import { useDispatch, useSelector } from "react-redux";
+} from '@mui/material';
+import { Link } from 'react-router-dom';
+import { useTheme } from '@mui/styles';
+import { useDispatch, useSelector } from 'react-redux';
 
-import useStyles from "./styles";
-import { useGetGenresQuery } from "../../services/TMDB";
-import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
-import genreIcons from "../../assets/genres";
+import useStyles from './styles';
+import { useGetGenresQuery } from '../../services/TMDB';
+import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
+import genreIcons from '../../assets/genres';
 
 const redLogo =
-  "https://fontmeme.com/permalink/230210/c667b5b119130b72041ead813943dbae.png";
+  'https://fontmeme.com/permalink/230210/c667b5b119130b72041ead813943dbae.png';
 const blueLogo =
-  "https://fontmeme.com/permalink/230210/c667b5b119130b72041ead813943dbae.png";
+  'https://fontmeme.com/permalink/230210/c667b5b119130b72041ead813943dbae.png';
 
 const categories = [
-  { label: "Popular", value: "popular" },
-  { label: "Top Rated", value: "top_rated" },
-  { label: "Upcoming", value: "upcoming" },
+  { label: 'Popular', value: 'popular' },
+  { label: 'Top Rated', value: 'top_rated' },
+  { label: 'Upcoming', value: 'upcoming' },
 ];
 
 function Sidebar({ setMobileOpen }) {
@@ -44,18 +44,18 @@ function Sidebar({ setMobileOpen }) {
 
   return (
     <>
-      <Link to="/" className={classes.imageLink}>
+      <Link to='/' className={classes.imageLink}>
         <img
           className={classes.image}
-          src={theme.palette.mode === "light" ? redLogo : blueLogo}
-          alt="Cinemastock Logo"
+          src={theme.palette.mode === 'light' ? redLogo : blueLogo}
+          alt='Cinemastock Logo'
         />
       </Link>
       <Divider />
       <List>
         <ListSubheader>Categories</ListSubheader>
         {categories.map(({ label, value }) => (
-          <Link key={value} className={classes.links} to="/">
+          <Link key={value} className={classes.links} to='/'>
             <ListItem
               button
               onClick={() => dispatch(selectGenreOrCategory(value))}
@@ -76,12 +76,12 @@ function Sidebar({ setMobileOpen }) {
       <List>
         <ListSubheader>Genres</ListSubheader>
         {isFetching ? (
-          <Box display="flex" justifyContent="center">
-            <CircularProgress size="4rem" />
+          <Box display='flex' justifyContent='center'>
+            <CircularProgress size='4rem' />
           </Box>
         ) : (
           data?.genres?.map(({ name, id }) => (
-            <Link key={name} className={classes.links} to="/">
+            <Link key={name} className={classes.links} to='/'>
               <ListItem
                 button
                 onClick={() => dispatch(selectGenreOrCategory(id))}
