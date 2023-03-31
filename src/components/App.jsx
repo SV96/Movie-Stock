@@ -20,6 +20,7 @@ function App() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Routes>
+          <Route exact path="/Movie-Stock/" element={<Movies />} />
           <Route exact path="/" element={<Movies />} />
           <Route exact path="/approved" element={<Movies />} />
           <Route exact path="/movie/:id" element={<MovieInfo />} />
